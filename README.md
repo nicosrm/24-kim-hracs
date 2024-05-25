@@ -8,5 +8,4 @@ K. Stenning und M. van Lambalgen, *Human Reasoning and Cognitive Science*. The M
 
 Dieser Vortrag ist lizenziert unter der [Creative Commons Attribution 4.0 International](LICENSE) Lizenz.
 
-<img src="https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png" width="30" />
-<img src="https://mirrors.creativecommons.org/presskit/icons/by.xlarge.png" width="30" />
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png" width="30" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.xlarge.png" width="30" />
