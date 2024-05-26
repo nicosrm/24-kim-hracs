@@ -5,8 +5,25 @@
 
 \setbeamertemplate{frame footer}{\insertshorttitle, \insertshortauthor}
 
+% hide roman numbering on first frame with `allowframebreak`
+\setbeamertemplate{frametitle continuation}[from second][\insertcontinuationcountroman]
+
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
+\usepackage[htt]{hyphenat}
+
+\usepackage{csquotes}
+
+\usepackage[backend=biber, style=numeric-comp]{biblatex}
+\addbibresource{bibliography.bib}
+
+\DefineBibliographyStrings{ngerman}{
+    andothers = {et\addabbrvspace al\adddot}
+}
+
+% Fix overfull hbox in references
+% https://tex.stackexchange.com/questions/171999/overfull-hbox-in-biblatex#comment397014_171999
+\usepackage[final]{microtype}
 
 \usepackage{hyperref}
 \usepackage{ccicons}
@@ -33,8 +50,16 @@
   \section{First Section}
 
   \begin{frame}{First Frame}
-    Hello, world!
+    Hello, world! \cite{stenningHumanReasoningCognitive2008}
   \end{frame}
+
+  {
+    \metroset{sectionpage=none}
+    \section{Literatur}
+    \begin{frame}[allowframebreaks]{Literatur}
+      \printbibliography
+    \end{frame}
+  }
 
   \begin{frame}{Lizenz}
     Dieser Vortrag ist unter der \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International} lizenziert. \ccby
