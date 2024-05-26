@@ -1,0 +1,12 @@
+% !TeX root = ../main.tex
+
+\documentclass{beamer}
+\usetheme{metropolis}
+
+\setbeamertemplate{frame footer}{\insertshorttitle, \insertshortauthor}
+
+% hide roman numbering on first frame with `allowframebreak`
+\setbeamertemplate{frametitle continuation}[from second][\insertcontinuationcountroman]
+
+\input{header/packages}
+\input{header/metadata}
