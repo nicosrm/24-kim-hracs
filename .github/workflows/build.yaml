@@ -1,8 +1,8 @@
-name: Build PDF
+name: Build Slides
 on: [push]
 
 jobs:
-  build_latex:
+  build_slides:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -15,8 +15,39 @@ jobs:
           root_file: main.tex
           latexmk_shell_escape: true
 
+      - name: Rename file
+        run: |
+          cp tex/main.pdf slides.pdf
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: tex/main.pdf
+          name: slides
+          path: slides.pdf
+
+  build_slides_without_pause:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Ignore pauses
+        run: |
+          sed -i 's/\\documentclass\[/\\documentclass\[handout,/' tex/main.tex
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: tex
+          root_file: main.tex
+          latexmk_shell_escape: true
+
+      - name: Rename file
+        run: |
+          cp tex/main.pdf slides_without_pause.pdf
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides
+          path: slides_without_pause.pdf
