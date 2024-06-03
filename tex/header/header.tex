@@ -1,12 +1,24 @@
 % !TeX root = ../main.tex
 
 \documentclass{beamer}
+% \documentclass[handout]{beamer}
+
 \usetheme{metropolis}
 
 \setbeamertemplate{frame footer}{\insertshorttitle, \insertshortauthor}
 
 % hide roman numbering on first frame with `allowframebreak`
 \setbeamertemplate{frametitle continuation}[from second][\insertcontinuationcountroman]
+
+% remove vertical spacing in toc
+% https://tex.stackexchange.com/a/170438
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vfill}
+  {\vskip\itemsep}
+  {}
+  {}
+\makeatother 
 
 \input{header/packages}
 \input{header/metadata}
