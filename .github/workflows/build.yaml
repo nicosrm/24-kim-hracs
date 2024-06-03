@@ -20,7 +20,7 @@ jobs:
           cp tex/main.pdf slides.pdf
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: slides
           path: slides.pdf
@@ -47,7 +47,7 @@ jobs:
           cp tex/main.pdf slides_without_pause.pdf
 
       - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: slides
           path: slides_without_pause.pdf
