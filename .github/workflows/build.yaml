@@ -33,7 +33,7 @@ jobs:
 
       - name: Ignore pauses
         run: |
-          sed -i 's/\\documentclass\[/\\documentclass\[handout,/' tex/main.tex
+          sed -i 's/\\documentclass\[/\\documentclass\[handout,/' tex/header/header.tex
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
