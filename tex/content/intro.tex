@@ -8,3 +8,35 @@
 \begin{frame}{Einführung}
     Lorem ipsum
 \end{frame}
+
+\begin{frame}{Wason's Selection Task {\scriptsize \cite[S.~44-46]{stenningHumanReasoningCognitive2008}}}
+
+    \textbf{Regel:} \emph{If there is a vowel on one side, then there is an even number on the other side.}
+
+    \[
+        \framebox[5em][c]{A\strut}\quad
+        \framebox[5em][c]{K\strut}\quad
+        \framebox[5em][c]{4\strut}\quad
+        \framebox[5em][c]{7\strut}
+    \]
+
+    Welche Karten \emph{müssen} umgedreht werden, um zu entscheiden, ob die Regel wahr ist?
+
+    $\Rightarrow (p \to q) \rightsquigarrow (\text{Vokal} \to 2\mathbb{N})$
+
+    Kompetenzantwort: $p$ und $\lnot q$, d.h. A und 7
+\end{frame}
+
+\begin{frame}{Wason's Selection Task {\scriptsize \cite[S.~44-46]{stenningHumanReasoningCognitive2008}}}
+    $(p \to q) \rightsquigarrow (\text{Vokal} \to 2\mathbb{N})$
+
+    \begin{center}
+        \begin{tabular}{c | c | c | c | c}
+            $p$ &$p,~q$ &\alert{$p, ~\lnot q$} &$p, ~q, ~\lnot q$ &anderes \\
+            \hline
+            A &A, 4 &\alert{A, 7} &A, 4, 7 & \\
+            \hline \hline
+            35\% &45\% &\alert{5\%} &7\% &8\%
+        \end{tabular}
+    \end{center}
+\end{frame}
