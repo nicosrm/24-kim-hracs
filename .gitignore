@@ -3,6 +3,8 @@
 .vscode
 main.pdf
 
+.venv
+
 
 # github/gitignore/TeX.gitignore
 # https://github.com/github/gitignore/blob/main/TeX.gitignore
