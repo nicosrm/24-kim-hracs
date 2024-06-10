@@ -21,7 +21,12 @@
   {\vskip\itemsep}
   {}
   {}
-\makeatother 
+\makeatother
+
+% remove indent on `itemize`
+% https://tex.stackexchange.com/a/450317
+\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmargini}{\labelsep}
 
 \input{header/packages}
 \input{header/metadata}
