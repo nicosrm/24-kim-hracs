@@ -1,5 +1,10 @@
 % !TeX root = ../main.tex
 
+{
+    \metroset{sectionpage=none}
+    \section{Zuvor bei HRaCs...}
+}
+
 \begin{frame}{Zuvor bei HRaCS...}
     \begin{itemize}
         % Chapter 1
@@ -13,8 +18,85 @@
         \pause
 
         % Chapter 3
-        \item Wason's Selection Task, Two-Rule-Task, Tutoren-Dialoge
-        \item Bayes'sches Information-Gain Model
+        \item \textsc{Wason}'s Selection Task, Two-Rule-Task, Tutoren-Dialoge
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Wason's Selection Task {\scriptsize \cite[S.~44-46]{stenningHumanReasoningCognitive2008}}}
+    \textbf{Regel:} \emph{If there is a vowel on one side, then there is an even number on the other side.}
+
+    \[
+        \framebox[5em][c]{A\strut}\quad
+        \framebox[5em][c]{K\strut}\quad
+        \framebox[5em][c]{4\strut}\quad
+        \framebox[5em][c]{7\strut}
+    \]
+
+    Welche Karten \emph{müssen} umgedreht werden, um zu entscheiden, ob die Regel wahr ist?
+
+    $\Rightarrow (p \to q) \leadsto (\text{Vokal} \to 2\mathbb{N})$
+
+    Kompetenzantwort: $p$ und $\lnot q$, d.h. A und 7
+\end{frame}
+
+\begin{frame}{Wason's Selection Task {\scriptsize \cite[S.~44-46]{stenningHumanReasoningCognitive2008}}}
+    $$(p \to q) \leadsto (\text{Vokal} \to 2\mathbb{N})$$
+
+    \begin{center}
+        \begin{tabular}{c | c | c | c | c}
+            $p$ &$p,~q$ &\alert{$p, ~\lnot q$} &$p, ~q, ~\lnot q$ &anderes \\
+            \hline
+            A &A, 4 &\alert{A, 7} &A, 4, 7 & \\
+            \hline \hline
+            35\% &45\% &\alert{5\%} &7\% &8\%
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Two-Rule Task {\scriptsize \cite[S.~61-63]{stenningHumanReasoningCognitive2008}}}
+    \begin{enumerate}
+        \item \emph{If there is a $U$ on one side, then there is an 8 on the other side.}
+        \item \emph{If there is a $I$ on one side, then there is an 8 on the other side.}
+    \end{enumerate}
+
+    \[
+        \framebox[5em][c]{U\strut}\quad
+        \framebox[5em][c]{I\strut}\quad
+        \framebox[5em][c]{8\strut}\quad
+        \framebox[5em][c]{3\strut}
+    \]
+
+    Genau eine Regel ist wahr. Welche Karten \emph{müssen} umgedreht werden, um zu entscheiden, welche Regel wahr ist?
+
+    $\Rightarrow (p \to q) \leadsto (\{U, I\} \to 8)$
+
+    Kompetenzantwort: $\lnot q$, d.h. $3$\\
+    {\footnotesize (hinreichend, identifiziert falsche Regel)}
+\end{frame}
+
+
+\begin{frame}{Zuvor bei HRaCS...}
+    \begin{itemize}
+        {
+            \color{gray}
+            \setbeamertemplate{itemize item}{\color{gray}{\textbullet}}
+
+            % Chapter 1
+            \item Logik \& Psychologie
+            \item normative, deskriptive, präskriptive Regeln
+            
+            % Chapter 2
+            \item Konzepte der modernen Logik, Klassische Aussagenlogik, Closed-World-Reasoning etc.
+            \item großer Spielraum für Interpretationen von Konditionalen
+        }
+
+        % Chapter 3
+        \item \textsc{Wason}'s Selection Task, Two-Rule-Task, Tutoren-Dialoge
+        \item \textsc{Bayes}'sches Information-Gain Model
+        \pause
+
         \item[$\Rightarrow$] \alert{Interpretationsschwierigkeiten} von Proband:innen
         \begin{itemize}
             \item v.a. bei (abstrakten) deskriptiven Konditionalen
